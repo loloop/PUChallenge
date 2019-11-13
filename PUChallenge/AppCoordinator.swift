@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Common
 
 final class AppCoordinator: Coordinator {
 

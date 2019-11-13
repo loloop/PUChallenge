@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol Coordinator {
+public protocol Coordinator {
     func start()
 }
 
-protocol TabbedCoordinator: Coordinator {
+public protocol TabbedCoordinator: Coordinator {
     func startController() -> UIViewController
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Mauricio Cardozo. All rights reserved.
 //
 
-protocol CodableView {
+public protocol CodableView {
     func setupViews()
     func setupViewHierarchy()
     func setupConstraints()
@@ -15,7 +15,7 @@ protocol CodableView {
 
 extension CodableView {
 
-    func setupViews() {
+    public func setupViews() {
         setupViewHierarchy()
         setupConstraints()
         configureViews()
