@@ -15,6 +15,7 @@
 		B47C6A57237C773B0071BFC7 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A56237C773B0071BFC7 /* UICollectionView+Reusable.swift */; };
 		B47C6A5E237C77AB0071BFC7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A5C237C77AB0071BFC7 /* APIClient.swift */; };
 		B47C6A5F237C77AB0071BFC7 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A5D237C77AB0071BFC7 /* ImageDownloader.swift */; };
+		B47C6A63237C82550071BFC7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A62237C82550071BFC7 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		B47C6A56237C773B0071BFC7 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Reusable.swift"; path = "Common/Extensions/UICollectionView+Reusable.swift"; sourceTree = SOURCE_ROOT; };
 		B47C6A5C237C77AB0071BFC7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B47C6A5D237C77AB0071BFC7 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		B47C6A62237C82550071BFC7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		B47C6A61237C79250071BFC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B47C6A62237C82550071BFC7 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				B47C6A52237C76220071BFC7 /* Coordinator.swift in Sources */,
 				B47C6A51237C76200071BFC7 /* CodableView.swift in Sources */,
 				B47C6A5E237C77AB0071BFC7 /* APIClient.swift in Sources */,
+				B47C6A63237C82550071BFC7 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
