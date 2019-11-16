@@ -11,7 +11,6 @@
 		B46E8E29237C2CF700BCE516 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E28237C2CF700BCE516 /* SceneDelegate.swift */; };
 		B46E8E2D237C2CF700BCE516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46E8E2C237C2CF700BCE516 /* Assets.xcassets */; };
 		B46E8E33237C2CF700BCE516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46E8E31237C2CF700BCE516 /* LaunchScreen.storyboard */; };
-		B46E8E3E237C2CF700BCE516 /* PUChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E3D237C2CF700BCE516 /* PUChallengeTests.swift */; };
 		B46E8E55237C339D00BCE516 /* CitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E54237C339D00BCE516 /* CitiesService.swift */; };
 		B46E8E69237C4BCA00BCE516 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E68237C4BCA00BCE516 /* TabBarController.swift */; };
 		B46E8E6B237C4F9800BCE516 /* OfferPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E6A237C4F9800BCE516 /* OfferPageViewController.swift */; };
@@ -45,6 +44,11 @@
 		B47C6AB423809E490071BFC7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6AA3238092800071BFC7 /* Nimble.framework */; };
 		B47C6AB523809E490071BFC7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6A9F238092700071BFC7 /* Quick.framework */; };
 		B47C6AB72380A0CA0071BFC7 /* UIView+DynamicFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */; };
+		B47C6ABD2380A6850071BFC7 /* TripsServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ABC2380A6850071BFC7 /* TripsServiceSpec.swift */; };
+		B47C6ABF2380A68C0071BFC7 /* TripsCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ABE2380A68C0071BFC7 /* TripsCoordinatorSpec.swift */; };
+		B47C6AC22380A96A0071BFC7 /* FakeUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC12380A96A0071BFC7 /* FakeUIViewController.swift */; };
+		B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC32380AB920071BFC7 /* APIClientMock.swift */; };
+		B47C6AC62380B07E0071BFC7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC52380B07E0071BFC7 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +117,6 @@
 		B46E8E32237C2CF700BCE516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B46E8E34237C2CF700BCE516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B46E8E39237C2CF700BCE516 /* PUChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PUChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B46E8E3D237C2CF700BCE516 /* PUChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUChallengeTests.swift; sourceTree = "<group>"; };
 		B46E8E3F237C2CF700BCE516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B46E8E54237C339D00BCE516 /* CitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesService.swift; sourceTree = "<group>"; };
 		B46E8E68237C4BCA00BCE516 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -143,6 +146,11 @@
 		B47C6AA3238092800071BFC7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicFrame.swift"; sourceTree = "<group>"; };
+		B47C6ABC2380A6850071BFC7 /* TripsServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsServiceSpec.swift; sourceTree = "<group>"; };
+		B47C6ABE2380A68C0071BFC7 /* TripsCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCoordinatorSpec.swift; sourceTree = "<group>"; };
+		B47C6AC12380A96A0071BFC7 /* FakeUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIViewController.swift; sourceTree = "<group>"; };
+		B47C6AC32380AB920071BFC7 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		B47C6AC52380B07E0071BFC7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +210,7 @@
 				B46E8E2C237C2CF700BCE516 /* Assets.xcassets */,
 				B46E8E31237C2CF700BCE516 /* LaunchScreen.storyboard */,
 				B46E8E34237C2CF700BCE516 /* Info.plist */,
+				B47C6AC52380B07E0071BFC7 /* main.swift */,
 			);
 			path = PUChallenge;
 			sourceTree = "<group>";
@@ -209,9 +218,9 @@
 		B46E8E3C237C2CF700BCE516 /* PUChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B46E8E3D237C2CF700BCE516 /* PUChallengeTests.swift */,
+				B47C6AC02380A93B0071BFC7 /* Utilities */,
+				B47C6AB92380A66F0071BFC7 /* Trips */,
 				B46E8E3F237C2CF700BCE516 /* Info.plist */,
-				B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */,
 			);
 			path = PUChallengeTests;
 			sourceTree = "<group>";
@@ -412,6 +421,41 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		B47C6AB92380A66F0071BFC7 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6ABB2380A67A0071BFC7 /* Service */,
+				B47C6ABA2380A6750071BFC7 /* Coordinator */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		B47C6ABA2380A6750071BFC7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6ABE2380A68C0071BFC7 /* TripsCoordinatorSpec.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B47C6ABB2380A67A0071BFC7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6ABC2380A6850071BFC7 /* TripsServiceSpec.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B47C6AC02380A93B0071BFC7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */,
+				B47C6AC12380A96A0071BFC7 /* FakeUIViewController.swift */,
+				B47C6AC32380AB920071BFC7 /* APIClientMock.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -604,6 +648,7 @@
 				B46E8E6B237C4F9800BCE516 /* OfferPageViewController.swift in Sources */,
 				B47C6A6E237CD1370071BFC7 /* OfferPage.swift in Sources */,
 				B47C6A91237F74D80071BFC7 /* ProductCollectionViewCellViewModel+Deal.swift in Sources */,
+				B47C6AC62380B07E0071BFC7 /* main.swift in Sources */,
 				B46E8E76237C5AF600BCE516 /* AppCoordinator.swift in Sources */,
 				B46E8E7C237C6A3600BCE516 /* CitiesCoordinator.swift in Sources */,
 				B47C6A86237F737D0071BFC7 /* ProductsService.swift in Sources */,
@@ -620,7 +665,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B47C6AB72380A0CA0071BFC7 /* UIView+DynamicFrame.swift in Sources */,
-				B46E8E3E237C2CF700BCE516 /* PUChallengeTests.swift in Sources */,
+				B47C6AC22380A96A0071BFC7 /* FakeUIViewController.swift in Sources */,
+				B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */,
+				B47C6ABF2380A68C0071BFC7 /* TripsCoordinatorSpec.swift in Sources */,
+				B47C6ABD2380A6850071BFC7 /* TripsServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
