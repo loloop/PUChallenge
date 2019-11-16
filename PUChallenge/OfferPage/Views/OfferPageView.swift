@@ -37,12 +37,7 @@ final class OfferPageView: UIView {
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        if self.traitCollection.horizontalSizeClass == .compact {
-            layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 250)
-        } else {
-            layout.minimumInteritemSpacing = 1
-            layout.itemSize = CGSize(width: (UIScreen.main.bounds.width / 3) - 10, height: 250)
-        }
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 250)
         let view = CollectionView(sections: viewModel.sections, layout: layout)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
