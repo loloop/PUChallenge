@@ -17,6 +17,11 @@ final class TabBarController: UITabBarController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
+        configureTabBar()
+    }
+
+    func configureTabBar() {
+        self.view.tintColor = .secondary
     }
 
 }

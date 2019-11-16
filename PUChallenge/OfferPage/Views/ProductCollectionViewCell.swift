@@ -47,25 +47,13 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         partnerName.bottomAnchor.constraint(equalTo: productImage.bottomAnchor, constant: Margins.bottom)
     ]
 
-    // extract this to another view
-    // this wont work for ios 12 i think
+    // TODO: extract this to another view, as it needs that background circle too
     private lazy var favoriteButton: UIButton = {
         let view = UIButton()
-
-        // TODO: make single iOS12 supportable image
-        if #available(iOS 13.0, *) {
-            let configuration = UIImage.SymbolConfiguration(scale: UIImage.SymbolScale.medium)
-            let heart = UIImage(systemName: "heart")?
-                            .withTintColor(.white, renderingMode: .alwaysTemplate)
-                            .withConfiguration(configuration)
-            view.setImage(heart, for: .normal)
-
-            let filledHeart = UIImage(systemName: "heart.fill")?
-                                .withTintColor(.white, renderingMode: .alwaysTemplate)
-                                .withConfiguration(configuration)
-
-            view.setImage(filledHeart, for: .selected)
-        }
+        let heart = UIImage(named: "heart")
+        view.setImage(heart, for: .normal)
+        let filledHeart = UIImage(named: "heart.fill")
+        view.setImage(filledHeart, for: .selected)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(didTapHeartButton), for: .touchUpInside)
         return view

@@ -26,16 +26,9 @@ final class TripsCoordinator: TabbedCoordinator {
     }
 
     func startController() -> UIViewController {
-        // TODO: stringsdict and iOS 12
+        // TODO: stringsdict
         let trips = OfferPageViewController(service: TripsService())
-        if #available(iOS 13.0, *) {
-            trips.tabBarItem = UITabBarItem(title: "Viagens",
-                                            image: UIImage(systemName: "house"),
-                                            selectedImage: UIImage(systemName: "house.fill"))
-        } else {
-            // Fallback on earlier versions
-            trips.tabBarItem = UITabBarItem(title: "Viagens", image: nil, selectedImage: nil)
-        }
+        trips.tabBarItem = UITabBarItem(title: "Viagens", image: UIImage(named: "airplane"), selectedImage: nil)
         return UINavigationController(rootViewController: trips)
     }
 
