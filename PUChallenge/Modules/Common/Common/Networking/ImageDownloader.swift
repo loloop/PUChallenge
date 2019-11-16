@@ -58,7 +58,7 @@ final class ImageDownloader {
     private func loadImageFrom(url: URL?, completion: @escaping (UIImage?) -> Void) {
         guard let url = url else { return completion(nil) }
 
-        session.dataTask(with: url) { [weak self] data, response, error in
+        session.dataTask(with: url) { [weak self] data, _, _ in
             guard
                 let data = data,
                 let image = UIImage(data: data)

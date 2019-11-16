@@ -25,4 +25,3 @@ struct Deal: Codable {
 struct Partner: Codable {
     let name: String
 }
-

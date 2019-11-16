@@ -11,7 +11,6 @@
 		B46E8E29237C2CF700BCE516 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E28237C2CF700BCE516 /* SceneDelegate.swift */; };
 		B46E8E2D237C2CF700BCE516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46E8E2C237C2CF700BCE516 /* Assets.xcassets */; };
 		B46E8E33237C2CF700BCE516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46E8E31237C2CF700BCE516 /* LaunchScreen.storyboard */; };
-		B46E8E3E237C2CF700BCE516 /* PUChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E3D237C2CF700BCE516 /* PUChallengeTests.swift */; };
 		B46E8E55237C339D00BCE516 /* CitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E54237C339D00BCE516 /* CitiesService.swift */; };
 		B46E8E69237C4BCA00BCE516 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E68237C4BCA00BCE516 /* TabBarController.swift */; };
 		B46E8E6B237C4F9800BCE516 /* OfferPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8E6A237C4F9800BCE516 /* OfferPageViewController.swift */; };
@@ -36,6 +35,20 @@
 		B47C6A96237F75250071BFC7 /* OfferPageDealSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A95237F75250071BFC7 /* OfferPageDealSection.swift */; };
 		B47C6A98237F75580071BFC7 /* OfferPageDealSection+Deals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A97237F75580071BFC7 /* OfferPageDealSection+Deals.swift */; };
 		B47C6A9D237F76C20071BFC7 /* OfferPageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A9C237F76C20071BFC7 /* OfferPageServiceProtocol.swift */; };
+		B47C6AAE23809DEA0071BFC7 /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B47C6AAF23809DEE0071BFC7 /* Nimble_Snapshots.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B47C6AA2238092800071BFC7 /* Nimble_Snapshots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B47C6AB023809DF40071BFC7 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B47C6AA3238092800071BFC7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B47C6AB123809DF90071BFC7 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B47C6A9F238092700071BFC7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B47C6AB223809E490071BFC7 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */; };
+		B47C6AB323809E490071BFC7 /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6AA2238092800071BFC7 /* Nimble_Snapshots.framework */; };
+		B47C6AB423809E490071BFC7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6AA3238092800071BFC7 /* Nimble.framework */; };
+		B47C6AB523809E490071BFC7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6A9F238092700071BFC7 /* Quick.framework */; };
+		B47C6AB72380A0CA0071BFC7 /* UIView+DynamicFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */; };
+		B47C6ABD2380A6850071BFC7 /* TripsServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ABC2380A6850071BFC7 /* TripsServiceSpec.swift */; };
+		B47C6ABF2380A68C0071BFC7 /* TripsCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ABE2380A68C0071BFC7 /* TripsCoordinatorSpec.swift */; };
+		B47C6AC22380A96A0071BFC7 /* FakeUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC12380A96A0071BFC7 /* FakeUIViewController.swift */; };
+		B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC32380AB920071BFC7 /* APIClientMock.swift */; };
+		B47C6AC62380B07E0071BFC7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC52380B07E0071BFC7 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +94,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B47C6AAD23809DE00071BFC7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B47C6AB123809DF90071BFC7 /* Quick.framework in CopyFiles */,
+				B47C6AB023809DF40071BFC7 /* Nimble.framework in CopyFiles */,
+				B47C6AAF23809DEE0071BFC7 /* Nimble_Snapshots.framework in CopyFiles */,
+				B47C6AAE23809DEA0071BFC7 /* FBSnapshotTestCase.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -91,7 +117,6 @@
 		B46E8E32237C2CF700BCE516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B46E8E34237C2CF700BCE516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B46E8E39237C2CF700BCE516 /* PUChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PUChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B46E8E3D237C2CF700BCE516 /* PUChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUChallengeTests.swift; sourceTree = "<group>"; };
 		B46E8E3F237C2CF700BCE516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B46E8E54237C339D00BCE516 /* CitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesService.swift; sourceTree = "<group>"; };
 		B46E8E68237C4BCA00BCE516 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -116,6 +141,16 @@
 		B47C6A95237F75250071BFC7 /* OfferPageDealSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPageDealSection.swift; sourceTree = "<group>"; };
 		B47C6A97237F75580071BFC7 /* OfferPageDealSection+Deals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferPageDealSection+Deals.swift"; sourceTree = "<group>"; };
 		B47C6A9C237F76C20071BFC7 /* OfferPageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPageServiceProtocol.swift; sourceTree = "<group>"; };
+		B47C6A9F238092700071BFC7 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		B47C6AA2238092800071BFC7 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
+		B47C6AA3238092800071BFC7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicFrame.swift"; sourceTree = "<group>"; };
+		B47C6ABC2380A6850071BFC7 /* TripsServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsServiceSpec.swift; sourceTree = "<group>"; };
+		B47C6ABE2380A68C0071BFC7 /* TripsCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCoordinatorSpec.swift; sourceTree = "<group>"; };
+		B47C6AC12380A96A0071BFC7 /* FakeUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIViewController.swift; sourceTree = "<group>"; };
+		B47C6AC32380AB920071BFC7 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		B47C6AC52380B07E0071BFC7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +166,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47C6AB223809E490071BFC7 /* FBSnapshotTestCase.framework in Frameworks */,
+				B47C6AB323809E490071BFC7 /* Nimble_Snapshots.framework in Frameworks */,
+				B47C6AB423809E490071BFC7 /* Nimble.framework in Frameworks */,
+				B47C6AB523809E490071BFC7 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +210,7 @@
 				B46E8E2C237C2CF700BCE516 /* Assets.xcassets */,
 				B46E8E31237C2CF700BCE516 /* LaunchScreen.storyboard */,
 				B46E8E34237C2CF700BCE516 /* Info.plist */,
+				B47C6AC52380B07E0071BFC7 /* main.swift */,
 			);
 			path = PUChallenge;
 			sourceTree = "<group>";
@@ -178,7 +218,8 @@
 		B46E8E3C237C2CF700BCE516 /* PUChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B46E8E3D237C2CF700BCE516 /* PUChallengeTests.swift */,
+				B47C6AC02380A93B0071BFC7 /* Utilities */,
+				B47C6AB92380A66F0071BFC7 /* Trips */,
 				B46E8E3F237C2CF700BCE516 /* Info.plist */,
 			);
 			path = PUChallengeTests;
@@ -275,6 +316,10 @@
 		B47C6A48237C75380071BFC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */,
+				B47C6AA2238092800071BFC7 /* Nimble_Snapshots.framework */,
+				B47C6AA3238092800071BFC7 /* Nimble.framework */,
+				B47C6A9F238092700071BFC7 /* Quick.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,6 +421,41 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		B47C6AB92380A66F0071BFC7 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6ABB2380A67A0071BFC7 /* Service */,
+				B47C6ABA2380A6750071BFC7 /* Coordinator */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		B47C6ABA2380A6750071BFC7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6ABE2380A68C0071BFC7 /* TripsCoordinatorSpec.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B47C6ABB2380A67A0071BFC7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6ABC2380A6850071BFC7 /* TripsServiceSpec.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B47C6AC02380A93B0071BFC7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */,
+				B47C6AC12380A96A0071BFC7 /* FakeUIViewController.swift */,
+				B47C6AC32380AB920071BFC7 /* APIClientMock.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,6 +467,7 @@
 				B46E8E20237C2CF600BCE516 /* Frameworks */,
 				B46E8E21237C2CF600BCE516 /* Resources */,
 				B47C6A4B237C75390071BFC7 /* Embed Frameworks */,
+				B47C6AB82380A1AA0071BFC7 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -405,6 +486,8 @@
 				B46E8E35237C2CF700BCE516 /* Sources */,
 				B46E8E36237C2CF700BCE516 /* Frameworks */,
 				B46E8E37237C2CF700BCE516 /* Resources */,
+				B47C6AA8238093740071BFC7 /* Carthage */,
+				B47C6AAD23809DE00071BFC7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -496,6 +579,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B47C6AA8238093740071BFC7 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSnapshotTestCase.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble_Snapshots.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBSnapshotTestCase.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble_Snapshots.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks\n/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "
+";
+		};
+		B47C6AB82380A1AA0071BFC7 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B46E8E1F237C2CF600BCE516 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -517,6 +648,7 @@
 				B46E8E6B237C4F9800BCE516 /* OfferPageViewController.swift in Sources */,
 				B47C6A6E237CD1370071BFC7 /* OfferPage.swift in Sources */,
 				B47C6A91237F74D80071BFC7 /* ProductCollectionViewCellViewModel+Deal.swift in Sources */,
+				B47C6AC62380B07E0071BFC7 /* main.swift in Sources */,
 				B46E8E76237C5AF600BCE516 /* AppCoordinator.swift in Sources */,
 				B46E8E7C237C6A3600BCE516 /* CitiesCoordinator.swift in Sources */,
 				B47C6A86237F737D0071BFC7 /* ProductsService.swift in Sources */,
@@ -532,7 +664,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B46E8E3E237C2CF700BCE516 /* PUChallengeTests.swift in Sources */,
+				B47C6AB72380A0CA0071BFC7 /* UIView+DynamicFrame.swift in Sources */,
+				B47C6AC22380A96A0071BFC7 /* FakeUIViewController.swift in Sources */,
+				B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */,
+				B47C6ABF2380A68C0071BFC7 /* TripsCoordinatorSpec.swift in Sources */,
+				B47C6ABD2380A6850071BFC7 /* TripsServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +821,10 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7N9Z7384YN;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PUChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -705,6 +845,10 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7N9Z7384YN;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PUChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -724,6 +868,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7N9Z7384YN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PUChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -746,6 +894,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7N9Z7384YN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PUChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

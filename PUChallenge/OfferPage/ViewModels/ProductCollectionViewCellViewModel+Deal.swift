@@ -11,8 +11,10 @@ import UIKit
 extension ProductCollectionViewCellViewModel {
     init(deal: Deal) {
         // TODO: stringsdict
-        let attributedString = NSMutableAttributedString(string: "A partir de", attributes: [.foregroundColor: UIColor.gray])
-        let priceString = NSAttributedString(string: "\n\(deal.salePrice)", attributes: [.foregroundColor: UIColor.secondary])
+        let attributedString = NSMutableAttributedString(string: "A partir de",
+                                                         attributes: [.foregroundColor: UIColor.gray])
+        let priceString = NSAttributedString(string: "\n\(deal.salePrice)",
+                                             attributes: [.foregroundColor: UIColor.secondary])
         attributedString.append(priceString)
 
         self = Self.init(imageURL: URL(string: deal.dealImage),

@@ -39,7 +39,7 @@ final class OfferPageViewController: UIViewController {
                 DispatchQueue.main.async {
                     self?.setupView(for: model.response)
                 }
-            case .failure(_):
+            case .failure:
                 DispatchQueue.main.async {
                     self?.setupError()
                 }

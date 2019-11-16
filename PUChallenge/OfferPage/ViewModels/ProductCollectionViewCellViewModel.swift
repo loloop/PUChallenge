@@ -16,7 +16,12 @@ struct ProductCollectionViewCellViewModel {
     let dealName: String
     let dealPrice: NSAttributedString
 
-    init(imageURL: URL?, partnerName: String, isFavorited: Bool, isTop: Bool, dealName: String, dealPrice: NSAttributedString) {
+    init(imageURL: URL?,
+         partnerName: String,
+         isFavorited: Bool,
+         isTop: Bool,
+         dealName: String,
+         dealPrice: NSAttributedString) {
         self.imageURL = imageURL
         self.partnerName = partnerName
         self.isFavorited = isFavorited

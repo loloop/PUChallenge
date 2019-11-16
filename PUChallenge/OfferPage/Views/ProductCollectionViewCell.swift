@@ -64,7 +64,6 @@ final class ProductCollectionViewCell: UICollectionViewCell {
                                 .withTintColor(.white, renderingMode: .alwaysTemplate)
                                 .withConfiguration(configuration)
 
-
             view.setImage(filledHeart, for: .selected)
         }
         view.translatesAutoresizingMaskIntoConstraints = false

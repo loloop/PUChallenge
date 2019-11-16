@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct BaseAPIModel<T>: Codable where T:Codable {
+public struct BaseAPIModel<T>: Codable where T: Codable {
     public let code: Int
     public let response: T
 }
