@@ -1,15 +1,15 @@
 //
-//  CitiesCoordinator.swift
+//  TripsCoordinator.swift
 //  PUChallenge
 //
-//  Created by Mauricio Cardozo on 11/13/19.
+//  Created by Mauricio Cardozo on 11/15/19.
 //  Copyright © 2019 Mauricio Cardozo. All rights reserved.
 //
 
 import UIKit
 import Common
 
-final class CitiesCoordinator: TabbedCoordinator {
+final class TripsCoordinator: TabbedCoordinator {
 
     private let rootViewController: UIViewController?
 
@@ -27,8 +27,8 @@ final class CitiesCoordinator: TabbedCoordinator {
 
     func startController() -> UIViewController {
         // TODO: stringsdict
-        let cities = OfferPageViewController()
-        cities.tabBarItem = UITabBarItem(title: "Na cidade", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        let cities = OfferPageViewController(service: TripsService())
+        cities.tabBarItem = UITabBarItem(title: "Viagens", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         return UINavigationController(rootViewController: cities)
     }
 
