@@ -1,19 +1,18 @@
 //
-//  CitiesService.swift
+//  TripsService.swift
 //  PUChallenge
 //
-//  Created by Mauricio Cardozo on 11/13/19.
+//  Created by Mauricio Cardozo on 11/15/19.
 //  Copyright © 2019 Mauricio Cardozo. All rights reserved.
 //
 
 import Foundation
 import Common
 
-final class CitiesService: OfferPageServiceProtocol {
+final class TripsService: OfferPageServiceProtocol {
 
     private let client: APIClientProtocol
-    private let endpoint: URL? = URL(string: "https://gist.githubusercontent.com/insidegui/2b1f747ebeb9070e33818bf857e28a84/raw/5da63767fda2ec16f4ae0718e3be4be75001fe10/florianopolis.json")
-
+    private let endpoint: URL? = URL(string: "https://gist.githubusercontent.com/insidegui/d2665b556f2be1b1ad3a19d2ef9bcc44/raw/afe1e0a9563e3bcddc3796b22becb8f12f82ee2e/viagens.json")
 
     init(client: APIClientProtocol? = nil) {
         if let client = client {
@@ -23,7 +22,6 @@ final class CitiesService: OfferPageServiceProtocol {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             self.client = APIClient(decoder: decoder)
         }
-
     }
 
     func fetchData(completion: @escaping (Result<BaseAPIModel<OfferPage>, NetworkError>) -> Void) {
