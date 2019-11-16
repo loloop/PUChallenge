@@ -21,6 +21,6 @@ extension CodableView {
         configureViews()
     }
 
-    func configureViews(){}
+    public func configureViews(){}
 
 }

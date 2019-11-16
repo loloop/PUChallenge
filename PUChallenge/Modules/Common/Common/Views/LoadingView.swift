@@ -44,6 +44,6 @@ extension LoadingView: CodableView {
 
     public func configureViews() {
         activityView.startAnimating()
-        backgroundColor = .white
+        backgroundColor = .systemBackground
     }
 }
