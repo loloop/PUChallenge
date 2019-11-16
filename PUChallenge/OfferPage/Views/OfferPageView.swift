@@ -78,7 +78,11 @@ extension OfferPageView: CodableView {
     }
 
     func configureViews() {
-        collectionView.backgroundColor = .systemBackground
+        if #available(iOS 13.0, *) {
+            collectionView.backgroundColor = .systemBackground
+        } else {
+            collectionView.backgroundColor = .background
+        }
         collectionView.reloadData()
     }
 }

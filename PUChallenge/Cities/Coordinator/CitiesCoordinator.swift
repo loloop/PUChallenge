@@ -26,9 +26,13 @@ final class CitiesCoordinator: TabbedCoordinator {
     }
 
     func startController() -> UIViewController {
-        // TODO: stringsdict
+        // TODO: stringsdict and iOS 12
         let cities = OfferPageViewController()
-        cities.tabBarItem = UITabBarItem(title: "Na cidade", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        if #available(iOS 13.0, *) {
+            cities.tabBarItem = UITabBarItem(title: "Na cidade", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        } else {
+            cities.tabBarItem = UITabBarItem(title: "Na cidade", image: nil, selectedImage: nil)
+        }
         return UINavigationController(rootViewController: cities)
     }
 

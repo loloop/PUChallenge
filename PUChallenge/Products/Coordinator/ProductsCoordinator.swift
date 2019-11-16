@@ -26,10 +26,14 @@ final class ProductsCoordinator: TabbedCoordinator {
     }
 
     func startController() -> UIViewController {
-        // TODO: stringsdict
-        let cities = OfferPageViewController(service: ProductsService())
-        cities.tabBarItem = UITabBarItem(title: "Produtos", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
-        return UINavigationController(rootViewController: cities)
+        // TODO: stringsdict and iOS 12
+        let products = OfferPageViewController(service: ProductsService())
+        if #available(iOS 13.0, *) {
+            products.tabBarItem = UITabBarItem(title: "Produtos", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        } else {
+            products.tabBarItem = UITabBarItem(title: "Viagens", image: nil, selectedImage: nil)
+        }
+        return UINavigationController(rootViewController: products)
     }
 
 }

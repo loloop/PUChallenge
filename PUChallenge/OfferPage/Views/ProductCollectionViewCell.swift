@@ -51,17 +51,22 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     // this wont work for ios 12 i think
     private lazy var favoriteButton: UIButton = {
         let view = UIButton()
-        let configuration = UIImage.SymbolConfiguration(scale: UIImage.SymbolScale.medium)
-        let heart = UIImage(systemName: "heart")?
-                        .withTintColor(.white, renderingMode: .alwaysTemplate)
-                        .withConfiguration(configuration)
-        view.setImage(heart, for: .normal)
 
-        let filledHeart = UIImage(systemName: "heart.fill")?
+        // TODO: make single iOS12 supportable image
+        if #available(iOS 13.0, *) {
+            let configuration = UIImage.SymbolConfiguration(scale: UIImage.SymbolScale.medium)
+            let heart = UIImage(systemName: "heart")?
                             .withTintColor(.white, renderingMode: .alwaysTemplate)
                             .withConfiguration(configuration)
+            view.setImage(heart, for: .normal)
 
-        view.setImage(filledHeart, for: .selected)
+            let filledHeart = UIImage(systemName: "heart.fill")?
+                                .withTintColor(.white, renderingMode: .alwaysTemplate)
+                                .withConfiguration(configuration)
+
+
+            view.setImage(filledHeart, for: .selected)
+        }
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(didTapHeartButton), for: .touchUpInside)
         return view
@@ -188,6 +193,10 @@ extension ProductCollectionViewCell: CodableView {
 
     func configureViews() {
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.backgroundColor = .systemBackground
+        if #available(iOS 13.0, *) {
+            contentView.backgroundColor = .systemBackground
+        } else {
+            contentView.backgroundColor = .background
+        }
     }
 }

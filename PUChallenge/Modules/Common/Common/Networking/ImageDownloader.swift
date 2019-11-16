@@ -12,7 +12,7 @@ extension UIImageView {
     public func downloadImage(url: URL?,
                               placeholder: UIImage? = UIImage(named: "pu-logo",
                                                               in: Bundle(identifier: "me.mauriciocardozo.Common"),
-                                                              compatibleWith: UITraitCollection.current)) {
+                                                              compatibleWith: UIScreen.main.traitCollection)) {
         self.image = placeholder
         let downloader = ImageDownloader()
         downloader.loadImage(url: url) { image in
@@ -70,7 +70,7 @@ final class ImageDownloader {
     }
 
     private func cacheImage(_ image: UIImage) {
-        
+
     }
 
 
