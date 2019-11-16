@@ -7,28 +7,42 @@
 //
 
 import XCTest
+import Quick
+import Nimble
+import Nimble_Snapshots
 @testable import PUChallenge
 
-class PUChallengeTests: XCTestCase {
+final class OfferPageViewControllerSpec: QuickSpec {
+    override func spec() {
+        describe("OfferPageView") {
+            var sut: OfferPageView!
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+            context("just testing a snapshot") {
+                beforeEach {
+                    let section = OfferPageDealSection(cells: [
+                        ProductCollectionViewCellViewModel(imageURL: nil, partnerName: "", isFavorited: true, isTop: true, dealName: "", dealPrice: NSAttributedString(string: ""))
+                    ])
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+                    sut = OfferPageView(viewModel: CitiesViewModel(sections: [section]))
+                    sut.setDynamicFrame()
+                }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+                it("should snapshot") {
+                    expect(sut).to(recordSnapshot())
+                }
+            }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+            context("another test") {
+                var coordinator: CitiesCoordinator!
+
+                beforeEach {
+                    coordinator = CitiesCoordinator()
+                }
+
+                it("shbould test") {
+                    expect(coordinator.startController().tabBarItem.title) == "Na cidade"
+                }
+            }
         }
     }
-
 }

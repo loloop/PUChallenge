@@ -36,6 +36,15 @@
 		B47C6A96237F75250071BFC7 /* OfferPageDealSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A95237F75250071BFC7 /* OfferPageDealSection.swift */; };
 		B47C6A98237F75580071BFC7 /* OfferPageDealSection+Deals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A97237F75580071BFC7 /* OfferPageDealSection+Deals.swift */; };
 		B47C6A9D237F76C20071BFC7 /* OfferPageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A9C237F76C20071BFC7 /* OfferPageServiceProtocol.swift */; };
+		B47C6AAE23809DEA0071BFC7 /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B47C6AAF23809DEE0071BFC7 /* Nimble_Snapshots.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B47C6AA2238092800071BFC7 /* Nimble_Snapshots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B47C6AB023809DF40071BFC7 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B47C6AA3238092800071BFC7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B47C6AB123809DF90071BFC7 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B47C6A9F238092700071BFC7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B47C6AB223809E490071BFC7 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */; };
+		B47C6AB323809E490071BFC7 /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6AA2238092800071BFC7 /* Nimble_Snapshots.framework */; };
+		B47C6AB423809E490071BFC7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6AA3238092800071BFC7 /* Nimble.framework */; };
+		B47C6AB523809E490071BFC7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6A9F238092700071BFC7 /* Quick.framework */; };
+		B47C6AB72380A0CA0071BFC7 /* UIView+DynamicFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +90,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B47C6AAD23809DE00071BFC7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B47C6AB123809DF90071BFC7 /* Quick.framework in CopyFiles */,
+				B47C6AB023809DF40071BFC7 /* Nimble.framework in CopyFiles */,
+				B47C6AAF23809DEE0071BFC7 /* Nimble_Snapshots.framework in CopyFiles */,
+				B47C6AAE23809DEA0071BFC7 /* FBSnapshotTestCase.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +138,11 @@
 		B47C6A95237F75250071BFC7 /* OfferPageDealSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPageDealSection.swift; sourceTree = "<group>"; };
 		B47C6A97237F75580071BFC7 /* OfferPageDealSection+Deals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferPageDealSection+Deals.swift"; sourceTree = "<group>"; };
 		B47C6A9C237F76C20071BFC7 /* OfferPageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPageServiceProtocol.swift; sourceTree = "<group>"; };
+		B47C6A9F238092700071BFC7 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		B47C6AA2238092800071BFC7 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
+		B47C6AA3238092800071BFC7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicFrame.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +158,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47C6AB223809E490071BFC7 /* FBSnapshotTestCase.framework in Frameworks */,
+				B47C6AB323809E490071BFC7 /* Nimble_Snapshots.framework in Frameworks */,
+				B47C6AB423809E490071BFC7 /* Nimble.framework in Frameworks */,
+				B47C6AB523809E490071BFC7 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +211,7 @@
 			children = (
 				B46E8E3D237C2CF700BCE516 /* PUChallengeTests.swift */,
 				B46E8E3F237C2CF700BCE516 /* Info.plist */,
+				B47C6AB62380A0CA0071BFC7 /* UIView+DynamicFrame.swift */,
 			);
 			path = PUChallengeTests;
 			sourceTree = "<group>";
@@ -275,6 +307,10 @@
 		B47C6A48237C75380071BFC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B47C6AA4238092800071BFC7 /* FBSnapshotTestCase.framework */,
+				B47C6AA2238092800071BFC7 /* Nimble_Snapshots.framework */,
+				B47C6AA3238092800071BFC7 /* Nimble.framework */,
+				B47C6A9F238092700071BFC7 /* Quick.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -387,6 +423,7 @@
 				B46E8E20237C2CF600BCE516 /* Frameworks */,
 				B46E8E21237C2CF600BCE516 /* Resources */,
 				B47C6A4B237C75390071BFC7 /* Embed Frameworks */,
+				B47C6AB82380A1AA0071BFC7 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -405,6 +442,8 @@
 				B46E8E35237C2CF700BCE516 /* Sources */,
 				B46E8E36237C2CF700BCE516 /* Frameworks */,
 				B46E8E37237C2CF700BCE516 /* Resources */,
+				B47C6AA8238093740071BFC7 /* Carthage */,
+				B47C6AAD23809DE00071BFC7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -496,6 +535,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B47C6AA8238093740071BFC7 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSnapshotTestCase.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble_Snapshots.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBSnapshotTestCase.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble_Snapshots.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks\n/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "
+";
+		};
+		B47C6AB82380A1AA0071BFC7 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B46E8E1F237C2CF600BCE516 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -532,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47C6AB72380A0CA0071BFC7 /* UIView+DynamicFrame.swift in Sources */,
 				B46E8E3E237C2CF700BCE516 /* PUChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +773,10 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7N9Z7384YN;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PUChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -705,6 +797,10 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7N9Z7384YN;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PUChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -724,6 +820,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7N9Z7384YN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PUChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -746,6 +846,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7N9Z7384YN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PUChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

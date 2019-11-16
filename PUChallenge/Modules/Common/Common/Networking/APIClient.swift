@@ -31,7 +31,7 @@ public final class APIClient: APIClientProtocol {
     public func fetchData<T: Decodable>(from url: URL?, completion: @escaping (Result<T, NetworkError>) -> Void) {
         guard let url = url else { return completion(.failure(.badURL)) }
 
-        session.dataTask(with: url) { data, response, error in
+        session.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 return completion(.failure(.downloadError))
             }

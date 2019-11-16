@@ -30,7 +30,9 @@ extension UIColor {
     }
 
     private static func color(for name: String) -> UIColor {
-        guard let color = UIColor(named: name, in: Bundle(identifier: "me.mauriciocardozo.Common"), compatibleWith: UIScreen.main.traitCollection) else {
+        guard let color = UIColor(named: name,
+                                  in: Bundle(identifier: "me.mauriciocardozo.Common"),
+                                  compatibleWith: UIScreen.main.traitCollection) else {
             fatalError("color name mismatch for \(name)")
         }
         return color
