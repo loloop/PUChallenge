@@ -12,8 +12,8 @@ import Common
 final class TabBarCoordinator: Coordinator {
 
     private let rootViewController: UIViewController
-    private lazy var tabBarController = TabBarController()
-    private lazy var coordinators: [TabbedCoordinator] = [
+    private(set) lazy var tabBarController = TabBarController()
+    private(set) lazy var coordinators: [TabbedCoordinator] = [
         CitiesCoordinator(),
         TripsCoordinator(),
         ProductsCoordinator(),

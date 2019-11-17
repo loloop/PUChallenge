@@ -50,6 +50,7 @@
 		B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC32380AB920071BFC7 /* APIClientMock.swift */; };
 		B47C6AC62380B07E0071BFC7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC52380B07E0071BFC7 /* main.swift */; };
 		B47C6ACF2380BFDE0071BFC7 /* AroundCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ACE2380BFDE0071BFC7 /* AroundCoordinator.swift */; };
+		B47C6AD52380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AD42380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,7 @@
 		B47C6AC32380AB920071BFC7 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		B47C6AC52380B07E0071BFC7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B47C6ACE2380BFDE0071BFC7 /* AroundCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundCoordinator.swift; sourceTree = "<group>"; };
+		B47C6AD42380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			children = (
 				B47C6AC02380A93B0071BFC7 /* Utilities */,
 				B47C6AB92380A66F0071BFC7 /* Trips */,
+				B47C6AD12380C88B0071BFC7 /* TabBar */,
 				B46E8E3F237C2CF700BCE516 /* Info.plist */,
 			);
 			path = PUChallengeTests;
@@ -483,6 +486,30 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		B47C6AD12380C88B0071BFC7 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6AD32380C8970071BFC7 /* Coordinators */,
+				B47C6AD22380C8930071BFC7 /* Controllers */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B47C6AD22380C8930071BFC7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B47C6AD32380C8970071BFC7 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6AD42380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -695,6 +722,7 @@
 				B47C6AB72380A0CA0071BFC7 /* UIView+DynamicFrame.swift in Sources */,
 				B47C6AC22380A96A0071BFC7 /* FakeUIViewController.swift in Sources */,
 				B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */,
+				B47C6AD52380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift in Sources */,
 				B47C6ABF2380A68C0071BFC7 /* TripsCoordinatorSpec.swift in Sources */,
 				B47C6ABD2380A6850071BFC7 /* TripsServiceSpec.swift in Sources */,
 			);
