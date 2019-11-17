@@ -11,24 +11,24 @@ import Common
 
 final class OfferPageDealSection: Section {
 
-    init(cells: [ProductCollectionViewCellViewModel]) {
+    init(cells: [ProductCellViewModel]) {
         self.cells = cells
     }
 
-    let cells: [ProductCollectionViewCellViewModel]
+    let cells: [ProductCellViewModel]
 
     func numberOfItemsInSection() -> Int {
         cells.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ProductCollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        let cell: ProductCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
         cell.setupCell(viewModel: cells[indexPath.item])
         return cell
     }
 
     func register(_ collectionView: UICollectionView) {
-        collectionView.register(ProductCollectionViewCell.self)
+        collectionView.register(ProductCell.self)
     }
 
 }

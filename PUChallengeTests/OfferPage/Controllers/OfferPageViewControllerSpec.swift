@@ -65,7 +65,7 @@ final class OfferPageViewControllerSpec: QuickSpec {
             }
 
             context("given the service has fetched data") {
-                fcontext("when fetching is a success") {
+                context("when fetching is a success") {
 
                     beforeEach {
                         mock = ServiceMock()

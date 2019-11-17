@@ -14,14 +14,14 @@ import Common
 final class ProductCollectionViewCellViewModelSpec: QuickSpec {
     override func spec() {
         describe("ProductCollectionViewCellViewModel") {
-            var sut: ProductCollectionViewCellViewModel!
+            var sut: ProductCellViewModel!
 
             context("given it is being initialized with a Deal") {
 
                 beforeEach {
                     let deal = Deal(dealId: "", contractNumber: "", contractId: "", dealType: "", dealCategory: "", pageId: "", title: "Churrasco", highlights: "", partner: Partner(name: "Robson"), dealImage: "https://google.com", dealCity: "", salePrice: 15.50)
 
-                    sut = ProductCollectionViewCellViewModel(deal: deal)
+                    sut = ProductCellViewModel(deal: deal)
                 }
 
                 it("has to map a Deal to itself") {

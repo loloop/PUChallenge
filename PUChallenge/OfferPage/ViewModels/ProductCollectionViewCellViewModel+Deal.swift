@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ProductCollectionViewCellViewModel {
+extension ProductCellViewModel {
     init(deal: Deal) {
         // TODO: stringsdict
         let attributedString = NSMutableAttributedString(string: "A partir de\n",

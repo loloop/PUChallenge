@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProductCollectionViewCellViewModel {
+struct ProductCellViewModel {
     let imageURL: URL?
     let partnerName: String
     let isFavorited: Bool

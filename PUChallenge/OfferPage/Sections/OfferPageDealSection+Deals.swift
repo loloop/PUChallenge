@@ -10,8 +10,8 @@ import Foundation
 
 extension OfferPageDealSection {
     convenience init(deals: [Deal]) {
-        let cells: [ProductCollectionViewCellViewModel] = deals.map { deal in
-            ProductCollectionViewCellViewModel(deal: deal)
+        let cells: [ProductCellViewModel] = deals.map { deal in
+            ProductCellViewModel(deal: deal)
         }
         self.init(cells: cells)
     }

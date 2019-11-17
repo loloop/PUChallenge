@@ -22,7 +22,7 @@ final class OfferPageDealSectionSpec: QuickSpec {
                 context("when a ProductCollectionViewModel array is passed") {
 
                     beforeEach {
-                        let viewModel = ProductCollectionViewCellViewModel(imageURL: nil, partnerName: "", isFavorited: false, isTop: false, dealName: "Teste 3 2 1", dealPrice: NSAttributedString())
+                        let viewModel = ProductCellViewModel(imageURL: nil, partnerName: "", isFavorited: false, isTop: false, dealName: "Teste 3 2 1", dealPrice: NSAttributedString())
 
                         sut = OfferPageDealSection(cells: [viewModel])
                     }
@@ -50,7 +50,7 @@ final class OfferPageDealSectionSpec: QuickSpec {
             context("given its Section implementation") {
 
                 beforeEach {
-                    let viewModel = ProductCollectionViewCellViewModel(imageURL: nil, partnerName: "", isFavorited: false, isTop: false, dealName: "Teste 3 2 1", dealPrice: NSAttributedString())
+                    let viewModel = ProductCellViewModel(imageURL: nil, partnerName: "", isFavorited: false, isTop: false, dealName: "Teste 3 2 1", dealPrice: NSAttributedString())
 
                     sut = OfferPageDealSection(cells: [viewModel, viewModel])
                 }
@@ -70,7 +70,7 @@ final class OfferPageDealSectionSpec: QuickSpec {
 
                     it("has to dequeue the cell and return it") {
                         let cell = sut.collectionView(fakeCollection, cellForItemAt: IndexPath(item: 0, section: 0))
-                        expect(cell).to(beAKindOf(ProductCollectionViewCell.self))
+                        expect(cell).to(beAKindOf(ProductCell.self))
                         expect(fakeCollection.didDequeueCell) == true
                     }
                 }
@@ -84,7 +84,7 @@ final class OfferPageDealSectionSpec: QuickSpec {
 
                     it("has to register a cell of type ProductCollectionViewCell on the collectionView") {
                         expect(fakeCollection.didRegisterCell) == true
-                        expect(fakeCollection.registeredCellIdentifier) == "ProductCollectionViewCell"
+                        expect(fakeCollection.registeredCellIdentifier) == "ProductCell"
                     }
                 }
             }

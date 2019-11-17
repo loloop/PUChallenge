@@ -9,25 +9,6 @@
 import UIKit
 import Common
 
-final class OfferPageViewModel {
-    let sections: [Section]
-    let title: String
-
-    init(sections: [Section], title: String) {
-        self.sections = sections
-        self.title = title
-    }
-}
-
-extension OfferPageViewModel {
-    convenience init(offerPage: OfferPage) {
-        let title = offerPage.deals.first?.dealCity ?? ""
-        self.init(sections: [
-            OfferPageDealSection(deals: offerPage.deals)
-        ], title: title)
-    }
-}
-
 final class OfferPageView: UIView {
 
     private let viewModel: OfferPageViewModel

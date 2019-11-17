@@ -9,7 +9,7 @@
 import UIKit
 import Common
 
-final class ProductCollectionViewCell: UICollectionViewCell {
+final class ProductCell: UICollectionViewCell {
 
     private struct Margins {
         static let top: CGFloat = 10
@@ -31,7 +31,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         productImage.topAnchor.constraint(equalTo: contentView.topAnchor),
         productImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
         productImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-        productImage.bottomAnchor.constraint(equalTo: deal.topAnchor),
+        productImage.bottomAnchor.constraint(equalTo: productDescription.topAnchor),
         productImage.widthAnchor.constraint(equalTo: contentView.widthAnchor)
     ]
 
@@ -65,43 +65,16 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         favoriteButton.bottomAnchor.constraint(equalTo: productImage.bottomAnchor, constant: Margins.bottom)
     ]
 
-    private lazy var deal: UIView = {
-        let view = UIView()
+    private lazy var productDescription: ProductDescriptionView = {
+        let view = ProductDescriptionView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    private lazy var dealConstraints: [NSLayoutConstraint] = [
-        deal.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-        deal.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-        deal.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-        deal.widthAnchor.constraint(equalTo: contentView.widthAnchor)
-    ]
-
-    private lazy var dealName: UILabel = {
-        let view = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.numberOfLines = 2
-        return view
-    }()
-
-    private lazy var dealNameConstraints: [NSLayoutConstraint] = [
-        dealName.topAnchor.constraint(equalTo: deal.topAnchor, constant: Margins.top),
-        dealName.leadingAnchor.constraint(equalTo: deal.leadingAnchor, constant: Margins.leading),
-        dealName.bottomAnchor.constraint(equalTo: deal.bottomAnchor, constant: Margins.bottom)
-    ]
-
-    private lazy var dealPrice: UILabel = {
-        let view = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    private lazy var dealPriceConstraints: [NSLayoutConstraint] = [
-        dealPrice.topAnchor.constraint(equalTo: deal.topAnchor, constant: Margins.top),
-        dealPrice.leadingAnchor.constraint(equalTo: dealName.trailingAnchor, constant: Margins.leading),
-        dealPrice.trailingAnchor.constraint(equalTo: deal.trailingAnchor, constant: Margins.trailing),
-        dealPrice.bottomAnchor.constraint(equalTo: deal.bottomAnchor, constant: Margins.bottom)
+    private lazy var productDescriptionConstraints: [NSLayoutConstraint] = [
+        productDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+        productDescription.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+        productDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
     ]
 
     override init(frame: CGRect = .zero) {
@@ -109,16 +82,17 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         setupViews()
     }
 
+    @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupCell(viewModel: ProductCollectionViewCellViewModel) {
+    func setupCell(viewModel: ProductCellViewModel) {
         productImage.downloadImage(url: viewModel.imageURL)
         partnerName.text = viewModel.partnerName
         favoriteButton.isSelected = viewModel.isFavorited
-        dealName.text = viewModel.dealName
-        dealPrice.attributedText = viewModel.dealPrice
+        productDescription.dealName.text = viewModel.dealName
+        productDescription.dealPrice.attributedText = viewModel.dealPrice
     }
 
     @objc private func didTapHeartButton() {
@@ -144,18 +118,13 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension ProductCollectionViewCell: CodableView {
+extension ProductCell: CodableView {
     func setupViewHierarchy() {
         contentView.addSubviews([
             productImage,
             partnerName,
             favoriteButton,
-            deal
-        ])
-
-        deal.addSubviews([
-            dealName,
-            dealPrice
+            productDescription
         ])
     }
 
@@ -169,12 +138,7 @@ extension ProductCollectionViewCell: CodableView {
             productImageConstraints,
             partnerNameConstraints,
             favoriteButtonConstraints,
-            dealConstraints
-        ])
-
-        deal.addConstraints([
-            dealNameConstraints,
-            dealPriceConstraints
+            productDescriptionConstraints
         ])
     }
 
