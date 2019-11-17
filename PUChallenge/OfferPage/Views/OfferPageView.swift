@@ -16,6 +16,7 @@ final class OfferPageView: UIView {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 250)
+        layout.minimumLineSpacing = 0
         let view = CollectionView(sections: viewModel.sections, layout: layout)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

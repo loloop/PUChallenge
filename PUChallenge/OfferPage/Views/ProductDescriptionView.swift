@@ -12,11 +12,12 @@ import Common
 final class ProductDescriptionView: UIView {
 
     private struct Margins {
-           static let top: CGFloat = 10
-           static let leading: CGFloat = 10
-           static let bottom: CGFloat = -10
-           static let trailing: CGFloat = -10
-       }
+        static let top: CGFloat = 10
+        static let leading: CGFloat = 10
+        static let bottom: CGFloat = -10
+        static let trailing: CGFloat = -10
+        static let height: CGFloat = 70
+    }
 
     lazy var dealName: UILabel = {
         let view = UILabel()
@@ -35,12 +36,13 @@ final class ProductDescriptionView: UIView {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.numberOfLines = 2
+        view.textAlignment = .center
         return view
     }()
 
     private lazy var dealPriceConstraints: [NSLayoutConstraint] = [
         dealPrice.topAnchor.constraint(equalTo: topAnchor, constant: Margins.top),
-        dealPrice.leadingAnchor.constraint(equalTo: dealName.trailingAnchor, constant: Margins.leading),
+        dealPrice.leadingAnchor.constraint(greaterThanOrEqualTo: dealName.trailingAnchor, constant: Margins.leading),
         dealPrice.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Margins.trailing),
         dealPrice.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Margins.bottom),
         dealPrice.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.2)
@@ -65,7 +67,10 @@ extension ProductDescriptionView: CodableView {
             dealPrice
         ])
     }
+
     func setupConstraints() {
+        addConstraint(heightAnchor.constraint(equalToConstant: Margins.height))
+
         addConstraints([
             dealNameConstraints,
             dealPriceConstraints

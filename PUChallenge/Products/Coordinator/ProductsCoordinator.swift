@@ -30,7 +30,7 @@ final class ProductsCoordinator: TabbedCoordinator {
         let products = OfferPageViewController(service: ProductsService())
         products.tabBarItem = UITabBarItem(title: "Produtos",
                                            image: UIImage(named: "bag"),
-                                           selectedImage: UIImage(named: "bag.fill"))
+                                           selectedImage: UIImage(named: "bagfill"))
         return UINavigationController(rootViewController: products)
     }
 

@@ -34,7 +34,7 @@ final class TabBarCoordinatorSpec: QuickSpec {
                     it("has to configure itself") {
                         expect(sut.tabBarController.modalPresentationStyle) == .overFullScreen
                         expect(sut.tabBarController.modalTransitionStyle) == .crossDissolve
-                        expect(sut.tabBarController.viewControllers?.count) == 4
+                        expect(sut.tabBarController.viewControllers?.count) == 3
                     }
 
                     it("has to show itself") {

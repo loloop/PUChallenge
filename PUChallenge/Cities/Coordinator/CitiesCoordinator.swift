@@ -30,7 +30,7 @@ final class CitiesCoordinator: TabbedCoordinator {
         let cities = OfferPageViewController()
         cities.tabBarItem = UITabBarItem(title: "Na cidade",
                                          image: UIImage(named: "house"),
-                                         selectedImage: UIImage(named: "house.fill"))
+                                         selectedImage: UIImage(named: "housefill"))
         return UINavigationController(rootViewController: cities)
     }
 

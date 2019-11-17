@@ -12,14 +12,16 @@ extension ProductCellViewModel {
     init(deal: Deal) {
         // TODO: stringsdict
         let attributedString = NSMutableAttributedString(string: "A partir de\n",
-                                                         attributes: [.foregroundColor: UIColor.gray])
+                                                         attributes: [.foregroundColor: UIColor.gray,
+                                                         .font: UIFont.systemFont(ofSize: 12)])
 
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale(identifier: "pt_BR")
         if let formattedString = formatter.string(from: deal.salePrice as NSNumber) {
             let priceString = NSAttributedString(string: formattedString,
-                                                 attributes: [.foregroundColor: UIColor.secondary])
+                                                 attributes: [.foregroundColor: UIColor.secondary,
+                                                              .font: UIFont.systemFont(ofSize: 14)])
             attributedString.append(priceString)
         }
 

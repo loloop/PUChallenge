@@ -17,19 +17,32 @@ final class ProductImageViewSpec: QuickSpec {
 
             var sut: ProductImageView!
 
-            context("when laying itself out") {
+            context("given it is laying itself out") {
+                context("when it is favorited") {
+                    beforeEach {
+                        sut = ProductImageView(frame: CGRect(x: 0, y: 0, width: 414, height: 200))
+                        let image = ImageHelper.getURLForImage(named: "gasly")!
+                        sut.setupView(title: "Pierre Gasly on Podium", image: image, isFavorited: true)
+                    }
 
-                beforeEach {
-                    sut = ProductImageView(frame: CGRect(x: 0, y: 0, width: 414, height: 200))
-                    let image = ImageHelper.getURLForImage(named: "gasly")!
-                    sut.setupView(title: "Pierre Gasly on Podium", image: image)
+                    it("has to lay itself out correctly") {
+                        expect(sut).toEventually(haveValidSnapshot())
+                    }
                 }
 
-                it("has to lay itself out correctly") {
-                    expect(sut).toEventually(recordSnapshot())
-                }
+                context("when it is not favorited") {
+                    beforeEach {
+                        sut = ProductImageView(frame: CGRect(x: 0, y: 0, width: 414, height: 200))
+                        let image = ImageHelper.getURLForImage(named: "gasly")!
+                        sut.setupView(title: "Pierre Gasly on Podium", image: image, isFavorited: false)
+                    }
 
+                    it("has to lay itself out correctly") {
+                        expect(sut).toEventually(haveValidSnapshot())
+                    }
+                }
             }
+
         }
     }
 }

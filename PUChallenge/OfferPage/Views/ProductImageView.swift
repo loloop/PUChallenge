@@ -53,15 +53,14 @@ final class ProductImageView: UIView {
 
     private lazy var favoriteButton: UIButton = {
         let view = UIButton()
-        let heart = UIImage(named: "heart")
-        view.setImage(heart, for: .normal)
-        let filledHeart = UIImage(named: "heart.fill")
-        view.setImage(filledHeart, for: .selected)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(didTapHeartButton), for: .touchUpInside)
         view.backgroundColor = .favoriteBackground
         view.clipsToBounds = true
+        view.setImage(UIImage(named: "heart"), for: .normal)
+        view.setImage(UIImage(named: "heartfill"), for: .selected)
         view.layer.cornerRadius = Margins.favoriteRadius
+        view.imageView?.tintColor = .favorite
         return view
     }()
 
@@ -106,17 +105,11 @@ final class ProductImageView: UIView {
     func setupView(title: String, image: URL?, isFavorited: Bool) {
         partnerName.text = title
         productImage.downloadImage(url: image)
+        favoriteButton.isSelected = isFavorited
     }
 
     @objc private func didTapHeartButton() {
         favoriteButton.isSelected.toggle()
-
-        if favoriteButton.isSelected {
-            favoriteButton.setImage(UIImage(named: "heart.fill"), for: .normal)
-        } else {
-            favoriteButton.setImage(UIImage(named: "heart"), for: .normal)
-        }
-
         delegate?.didTapFavoriteButton(isSelected: favoriteButton.isSelected)
     }
 }
