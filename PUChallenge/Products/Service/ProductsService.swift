@@ -11,9 +11,9 @@ import Common
 
 final class ProductsService: OfferPageServiceProtocol {
 
-    private let client: APIClientProtocol
+    let client: APIClientProtocol
     //swiftlint:disable:next line_length
-    private let endpoint: URL? = URL(string: "https://gist.githubusercontent.com/insidegui/007fd6664650391dca199e6784d1f351/raw/862d701c69307f9e9053f8cb1ec438586fca4b64/produtos.json")
+    let endpoint: URL? = URL(string: "https://gist.githubusercontent.com/insidegui/007fd6664650391dca199e6784d1f351/raw/862d701c69307f9e9053f8cb1ec438586fca4b64/produtos.json")
 
     init(client: APIClientProtocol? = nil) {
         if let client = client {
