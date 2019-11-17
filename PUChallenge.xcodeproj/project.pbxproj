@@ -54,6 +54,8 @@
 		B47C6AD72380CA550071BFC7 /* TabBarControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AD62380CA550071BFC7 /* TabBarControllerSpec.swift */; };
 		B47C6ADC2380CAE70071BFC7 /* ProductsServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ADB2380CAE70071BFC7 /* ProductsServiceSpec.swift */; };
 		B47C6ADE2380CAF30071BFC7 /* ProductsCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ADD2380CAF30071BFC7 /* ProductsCoordinatorSpec.swift */; };
+		B47C6AE32380CBEE0071BFC7 /* CitiesCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AE22380CBEE0071BFC7 /* CitiesCoordinatorSpec.swift */; };
+		B47C6AE52380CBFC0071BFC7 /* CitiesServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AE42380CBFC0071BFC7 /* CitiesServiceSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +163,8 @@
 		B47C6AD62380CA550071BFC7 /* TabBarControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerSpec.swift; sourceTree = "<group>"; };
 		B47C6ADB2380CAE70071BFC7 /* ProductsServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServiceSpec.swift; sourceTree = "<group>"; };
 		B47C6ADD2380CAF30071BFC7 /* ProductsCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCoordinatorSpec.swift; sourceTree = "<group>"; };
+		B47C6AE22380CBEE0071BFC7 /* CitiesCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCoordinatorSpec.swift; sourceTree = "<group>"; };
+		B47C6AE42380CBFC0071BFC7 /* CitiesServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesServiceSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,7 @@
 		B46E8E3C237C2CF700BCE516 /* PUChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				B47C6ADF2380CBD40071BFC7 /* Cities */,
 				B47C6AD82380CAC50071BFC7 /* Products */,
 				B47C6AC02380A93B0071BFC7 /* Utilities */,
 				B47C6AB92380A66F0071BFC7 /* Trips */,
@@ -543,6 +548,31 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		B47C6ADF2380CBD40071BFC7 /* Cities */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6AE12380CBE20071BFC7 /* Service */,
+				B47C6AE02380CBDC0071BFC7 /* Coordinator */,
+			);
+			path = Cities;
+			sourceTree = "<group>";
+		};
+		B47C6AE02380CBDC0071BFC7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6AE22380CBEE0071BFC7 /* CitiesCoordinatorSpec.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B47C6AE12380CBE20071BFC7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6AE42380CBFC0071BFC7 /* CitiesServiceSpec.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -758,7 +788,9 @@
 				B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */,
 				B47C6ADC2380CAE70071BFC7 /* ProductsServiceSpec.swift in Sources */,
 				B47C6AD52380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift in Sources */,
+				B47C6AE52380CBFC0071BFC7 /* CitiesServiceSpec.swift in Sources */,
 				B47C6ABF2380A68C0071BFC7 /* TripsCoordinatorSpec.swift in Sources */,
+				B47C6AE32380CBEE0071BFC7 /* CitiesCoordinatorSpec.swift in Sources */,
 				B47C6ADE2380CAF30071BFC7 /* ProductsCoordinatorSpec.swift in Sources */,
 				B47C6ABD2380A6850071BFC7 /* TripsServiceSpec.swift in Sources */,
 			);
