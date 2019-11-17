@@ -16,7 +16,12 @@ public final class LoadingView: UIView {
     ]
 
     private lazy var activityView: UIActivityIndicatorView = {
-        let view = UIActivityIndicatorView()
+        let view: UIActivityIndicatorView
+        if #available(iOS 13.0, *) {
+            view = UIActivityIndicatorView(style: .medium)
+        } else {
+            view = UIActivityIndicatorView(style: .gray)
+        }
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
