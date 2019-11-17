@@ -49,6 +49,7 @@
 		B47C6AC22380A96A0071BFC7 /* FakeUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC12380A96A0071BFC7 /* FakeUIViewController.swift */; };
 		B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC32380AB920071BFC7 /* APIClientMock.swift */; };
 		B47C6AC62380B07E0071BFC7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC52380B07E0071BFC7 /* main.swift */; };
+		B47C6ACF2380BFDE0071BFC7 /* AroundCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ACE2380BFDE0071BFC7 /* AroundCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		B47C6AC12380A96A0071BFC7 /* FakeUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIViewController.swift; sourceTree = "<group>"; };
 		B47C6AC32380AB920071BFC7 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		B47C6AC52380B07E0071BFC7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B47C6ACE2380BFDE0071BFC7 /* AroundCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				B47C6A1A237C745A0071BFC7 /* Modules */,
+				B47C6ACB2380BFCB0071BFC7 /* Around */,
 				B46E8E49237C314B00BCE516 /* Cities */,
 				B47C6A83237F73090071BFC7 /* OfferPage */,
 				B46E8E4B237C315700BCE516 /* Products */,
@@ -456,6 +459,30 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		B47C6ACB2380BFCB0071BFC7 /* Around */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6AD02380C8570071BFC7 /* Controllers */,
+				B47C6ACD2380BFD30071BFC7 /* Coordinator */,
+			);
+			path = Around;
+			sourceTree = "<group>";
+		};
+		B47C6ACD2380BFD30071BFC7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B47C6ACE2380BFDE0071BFC7 /* AroundCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B47C6AD02380C8570071BFC7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -649,6 +676,7 @@
 				B47C6A6E237CD1370071BFC7 /* OfferPage.swift in Sources */,
 				B47C6A91237F74D80071BFC7 /* ProductCollectionViewCellViewModel+Deal.swift in Sources */,
 				B47C6AC62380B07E0071BFC7 /* main.swift in Sources */,
+				B47C6ACF2380BFDE0071BFC7 /* AroundCoordinator.swift in Sources */,
 				B46E8E76237C5AF600BCE516 /* AppCoordinator.swift in Sources */,
 				B46E8E7C237C6A3600BCE516 /* CitiesCoordinator.swift in Sources */,
 				B47C6A86237F737D0071BFC7 /* ProductsService.swift in Sources */,

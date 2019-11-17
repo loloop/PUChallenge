@@ -16,7 +16,8 @@ final class TabBarCoordinator: Coordinator {
     private lazy var coordinators: [TabbedCoordinator] = [
         CitiesCoordinator(),
         TripsCoordinator(),
-        ProductsCoordinator()
+        ProductsCoordinator(),
+        AroundCoordinator()
     ]
 
     init(controller: UIViewController) {
