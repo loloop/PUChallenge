@@ -25,6 +25,10 @@ extension UIColor {
         color(for: "favorite")
     }
 
+    public static var favoriteBackground: UIColor {
+        color(for: "favorite.background")
+    }
+
     public static var background: UIColor {
         .white
     }

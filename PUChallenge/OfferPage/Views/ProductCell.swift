@@ -19,11 +19,9 @@ final class ProductCell: UICollectionViewCell {
         static let favorite: CGFloat = 64
     }
 
-    private lazy var productImage: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFill
+    private lazy var productImage: ProductImageView = {
+        let view = ProductImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.clipsToBounds = true
         return view
     }()
 
@@ -31,38 +29,7 @@ final class ProductCell: UICollectionViewCell {
         productImage.topAnchor.constraint(equalTo: contentView.topAnchor),
         productImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
         productImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-        productImage.bottomAnchor.constraint(equalTo: productDescription.topAnchor),
-        productImage.widthAnchor.constraint(equalTo: contentView.widthAnchor)
-    ]
-
-    private lazy var partnerName: UILabel = {
-        let view = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .white
-        return view
-    }()
-
-    private lazy var partnerNameConstraints: [NSLayoutConstraint] = [
-        partnerName.leadingAnchor.constraint(equalTo: productImage.leadingAnchor, constant: Margins.leading),
-        partnerName.bottomAnchor.constraint(equalTo: productImage.bottomAnchor, constant: Margins.bottom)
-    ]
-
-    // TODO: extract this to another view, as it needs that background circle too
-    private lazy var favoriteButton: UIButton = {
-        let view = UIButton()
-        let heart = UIImage(named: "heart")
-        view.setImage(heart, for: .normal)
-        let filledHeart = UIImage(named: "heart.fill")
-        view.setImage(filledHeart, for: .selected)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.addTarget(self, action: #selector(didTapHeartButton), for: .touchUpInside)
-        return view
-    }()
-
-    private lazy var favoriteButtonConstraints: [NSLayoutConstraint] = [
-        favoriteButton.leadingAnchor.constraint(equalTo: partnerName.trailingAnchor),
-        favoriteButton.trailingAnchor.constraint(equalTo: productImage.trailingAnchor, constant: Margins.trailing),
-        favoriteButton.bottomAnchor.constraint(equalTo: productImage.bottomAnchor, constant: Margins.bottom)
+        productImage.bottomAnchor.constraint(equalTo: productDescription.topAnchor)
     ]
 
     private lazy var productDescription: ProductDescriptionView = {
@@ -74,7 +41,7 @@ final class ProductCell: UICollectionViewCell {
     private lazy var productDescriptionConstraints: [NSLayoutConstraint] = [
         productDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
         productDescription.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-        productDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+        productDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
     ]
 
     override init(frame: CGRect = .zero) {
@@ -88,33 +55,12 @@ final class ProductCell: UICollectionViewCell {
     }
 
     func setupCell(viewModel: ProductCellViewModel) {
-        productImage.downloadImage(url: viewModel.imageURL)
-        partnerName.text = viewModel.partnerName
-        favoriteButton.isSelected = viewModel.isFavorited
+        productImage.setupView(title: viewModel.partnerName,
+                               image: viewModel.imageURL,
+                               isFavorited: viewModel.isFavorited)
+
         productDescription.dealName.text = viewModel.dealName
         productDescription.dealPrice.attributedText = viewModel.dealPrice
-    }
-
-    @objc private func didTapHeartButton() {
-        favoriteButton.isSelected.toggle()
-    }
-
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        setupShadow()
-    }
-
-    func setupShadow() {
-        guard productImage.layer.sublayers == nil else {
-            return
-        }
-
-        let layer = CAGradientLayer()
-        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-        layer.locations = [0.5, 1.0]
-        layer.frame = productImage.frame
-        layer.opacity = 0.4
-        productImage.layer.addSublayer(layer)
     }
 }
 
@@ -122,8 +68,6 @@ extension ProductCell: CodableView {
     func setupViewHierarchy() {
         contentView.addSubviews([
             productImage,
-            partnerName,
-            favoriteButton,
             productDescription
         ])
     }
@@ -136,8 +80,6 @@ extension ProductCell: CodableView {
 
         contentView.addConstraints([
             productImageConstraints,
-            partnerNameConstraints,
-            favoriteButtonConstraints,
             productDescriptionConstraints
         ])
     }
