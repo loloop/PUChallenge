@@ -29,6 +29,7 @@ final class OfferPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigation()
         fetchData()
     }
 
@@ -48,12 +49,23 @@ final class OfferPageViewController: UIViewController {
     }
 
     func setupView(for page: OfferPage) {
-        let viewModel = CitiesViewModel(offerPage: page)
+        let viewModel = OfferPageViewModel(offerPage: page)
+        setupNavigationTitle(title: viewModel.title)
         view = OfferPageView(viewModel: viewModel)
     }
 
     func setupError() {
         // view = ErrorView(delegate: self)
+    }
+
+    func configureNavigation() {
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = .primary
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: OfferPageNavigationBarButtons())
+    }
+
+    func setupNavigationTitle(title: String) {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: OfferPageNavigationBarTitle(title: title))
     }
 
 }

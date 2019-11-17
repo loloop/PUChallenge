@@ -35,7 +35,7 @@ final class OfferPageDealSectionSpec: QuickSpec {
 
                 context("when a Deal array is passed") {
                     beforeEach {
-                        let deal = Deal(dealId: "", contractNumber: "", contractId: "", dealType: "", dealCategory: "", pageId: "", title: "Teste 1 2 3", highlights: "", partner: Partner(name: ""), dealImage: "", salePrice: 0)
+                        let deal = Deal(dealId: "", contractNumber: "", contractId: "", dealType: "", dealCategory: "", pageId: "", title: "Teste 1 2 3", highlights: "", partner: Partner(name: "Robson"), dealImage: "https://google.com", dealCity: "", salePrice: 15.50)
 
                         sut = OfferPageDealSection(deals: [deal])
                     }

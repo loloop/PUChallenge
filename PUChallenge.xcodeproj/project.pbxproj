@@ -60,6 +60,8 @@
 		B47C6AEE2380CFD10071BFC7 /* UICollectionViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AED2380CFD10071BFC7 /* UICollectionViewSpy.swift */; };
 		B47C6AF02380D1E60071BFC7 /* ProductCollectionViewCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AEF2380D1E60071BFC7 /* ProductCollectionViewCellViewModelSpec.swift */; };
 		B47C6AF22380D6E30071BFC7 /* OfferPageViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AF12380D6E30071BFC7 /* OfferPageViewControllerSpec.swift */; };
+		B47C6AF42380E60A0071BFC7 /* OfferPageNavigationBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AF32380E60A0071BFC7 /* OfferPageNavigationBarButtons.swift */; };
+		B47C6AF62380E6200071BFC7 /* OfferPageNavigationBarTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AF52380E6200071BFC7 /* OfferPageNavigationBarTitle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,8 @@
 		B47C6AED2380CFD10071BFC7 /* UICollectionViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewSpy.swift; sourceTree = "<group>"; };
 		B47C6AEF2380D1E60071BFC7 /* ProductCollectionViewCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCellViewModelSpec.swift; sourceTree = "<group>"; };
 		B47C6AF12380D6E30071BFC7 /* OfferPageViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPageViewControllerSpec.swift; sourceTree = "<group>"; };
+		B47C6AF32380E60A0071BFC7 /* OfferPageNavigationBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPageNavigationBarButtons.swift; sourceTree = "<group>"; };
+		B47C6AF52380E6200071BFC7 /* OfferPageNavigationBarTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPageNavigationBarTitle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +422,8 @@
 			children = (
 				B47C6A92237F74F90071BFC7 /* OfferPageView.swift */,
 				B47C6A8B237F74810071BFC7 /* ProductCollectionViewCell.swift */,
+				B47C6AF32380E60A0071BFC7 /* OfferPageNavigationBarButtons.swift */,
+				B47C6AF52380E6200071BFC7 /* OfferPageNavigationBarTitle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -810,6 +816,7 @@
 				B46E8E69237C4BCA00BCE516 /* TabBarController.swift in Sources */,
 				B46E8E55237C339D00BCE516 /* CitiesService.swift in Sources */,
 				B47C6A72237CD1530071BFC7 /* Banner.swift in Sources */,
+				B47C6AF42380E60A0071BFC7 /* OfferPageNavigationBarButtons.swift in Sources */,
 				B46E8E72237C59E900BCE516 /* TabBarCoordinator.swift in Sources */,
 				B46E8E27237C2CF700BCE516 /* AppDelegate.swift in Sources */,
 				B47C6A9D237F76C20071BFC7 /* OfferPageServiceProtocol.swift in Sources */,
@@ -818,6 +825,7 @@
 				B47C6A6E237CD1370071BFC7 /* OfferPage.swift in Sources */,
 				B47C6A91237F74D80071BFC7 /* ProductCollectionViewCellViewModel+Deal.swift in Sources */,
 				B47C6AC62380B07E0071BFC7 /* main.swift in Sources */,
+				B47C6AF62380E6200071BFC7 /* OfferPageNavigationBarTitle.swift in Sources */,
 				B47C6ACF2380BFDE0071BFC7 /* AroundCoordinator.swift in Sources */,
 				B46E8E76237C5AF600BCE516 /* AppCoordinator.swift in Sources */,
 				B46E8E7C237C6A3600BCE516 /* CitiesCoordinator.swift in Sources */,

@@ -9,31 +9,28 @@
 import UIKit
 import Common
 
-protocol CitiesViewModelProtocol {
-    var sections: [Section] { get }
-}
-
-final class CitiesViewModel: CitiesViewModelProtocol {
-
+final class OfferPageViewModel {
     let sections: [Section]
+    let title: String
 
-    init(sections: [Section]) {
+    init(sections: [Section], title: String) {
         self.sections = sections
+        self.title = title
     }
-
 }
 
-extension CitiesViewModel {
+extension OfferPageViewModel {
     convenience init(offerPage: OfferPage) {
+        let title = offerPage.deals.first?.dealCity ?? ""
         self.init(sections: [
             OfferPageDealSection(deals: offerPage.deals)
-        ])
+        ], title: title)
     }
 }
 
 final class OfferPageView: UIView {
 
-    private let viewModel: CitiesViewModelProtocol
+    private let viewModel: OfferPageViewModel
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -50,7 +47,7 @@ final class OfferPageView: UIView {
         collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
     ]
 
-    init(viewModel: CitiesViewModelProtocol) {
+    init(viewModel: OfferPageViewModel) {
         self.viewModel = viewModel
         super.init(frame: .zero)
         setupViews()

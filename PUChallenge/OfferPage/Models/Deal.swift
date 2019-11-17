@@ -19,6 +19,7 @@ struct Deal: Codable {
     let highlights: String
     let partner: Partner
     let dealImage: String
+    let dealCity: String
     let salePrice: Double
 }
 
