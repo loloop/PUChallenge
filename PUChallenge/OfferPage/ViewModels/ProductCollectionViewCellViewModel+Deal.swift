@@ -11,11 +11,17 @@ import UIKit
 extension ProductCollectionViewCellViewModel {
     init(deal: Deal) {
         // TODO: stringsdict
-        let attributedString = NSMutableAttributedString(string: "A partir de",
+        let attributedString = NSMutableAttributedString(string: "A partir de\n",
                                                          attributes: [.foregroundColor: UIColor.gray])
-        let priceString = NSAttributedString(string: "\n\(deal.salePrice)",
-                                             attributes: [.foregroundColor: UIColor.secondary])
-        attributedString.append(priceString)
+
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "pt_BR")
+        if let formattedString = formatter.string(from: deal.salePrice as NSNumber) {
+            let priceString = NSAttributedString(string: formattedString,
+                                                 attributes: [.foregroundColor: UIColor.secondary])
+            attributedString.append(priceString)
+        }
 
         self = Self.init(imageURL: URL(string: deal.dealImage),
                   partnerName: deal.partner.name,

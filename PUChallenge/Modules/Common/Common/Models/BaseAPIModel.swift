@@ -11,4 +11,9 @@ import Foundation
 public struct BaseAPIModel<T>: Codable where T: Codable {
     public let code: Int
     public let response: T
+
+    public init(code: Int, response: T) {
+        self.code = code
+        self.response = response
+    }
 }
