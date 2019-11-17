@@ -51,6 +51,7 @@
 		B47C6AC62380B07E0071BFC7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AC52380B07E0071BFC7 /* main.swift */; };
 		B47C6ACF2380BFDE0071BFC7 /* AroundCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6ACE2380BFDE0071BFC7 /* AroundCoordinator.swift */; };
 		B47C6AD52380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AD42380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift */; };
+		B47C6AD72380CA550071BFC7 /* TabBarControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6AD62380CA550071BFC7 /* TabBarControllerSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,7 @@
 		B47C6AC52380B07E0071BFC7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B47C6ACE2380BFDE0071BFC7 /* AroundCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundCoordinator.swift; sourceTree = "<group>"; };
 		B47C6AD42380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorSpec.swift; sourceTree = "<group>"; };
+		B47C6AD62380CA550071BFC7 /* TabBarControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +500,7 @@
 		B47C6AD22380C8930071BFC7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B47C6AD62380CA550071BFC7 /* TabBarControllerSpec.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B47C6AB72380A0CA0071BFC7 /* UIView+DynamicFrame.swift in Sources */,
+				B47C6AD72380CA550071BFC7 /* TabBarControllerSpec.swift in Sources */,
 				B47C6AC22380A96A0071BFC7 /* FakeUIViewController.swift in Sources */,
 				B47C6AC42380AB920071BFC7 /* APIClientMock.swift in Sources */,
 				B47C6AD52380C8AE0071BFC7 /* TabBarCoordinatorSpec.swift in Sources */,
