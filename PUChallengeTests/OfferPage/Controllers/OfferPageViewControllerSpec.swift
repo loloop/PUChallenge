@@ -84,12 +84,14 @@ final class OfferPageViewControllerSpec: QuickSpec {
 
                     beforeEach {
                         mock = ServiceMock()
-                        mock.shouldFail = false
+                        mock.shouldFail = true
                         sut = OfferPageViewController(service: mock)
+                        sut.beginAppearanceTransition(true, animated: false)
+                        sut.endAppearanceTransition()
                     }
 
                     it("has to show an error view") {
-                        // expect(sut.view).to(beAKindOf(ErrorView.self))
+                        expect(sut.view).to(beAKindOf(ErrorView.self))
                     }
                 }
             }

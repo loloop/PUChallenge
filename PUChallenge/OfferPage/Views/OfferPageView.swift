@@ -52,7 +52,7 @@ extension OfferPageView: ViewConfiguration {
     }
 
     func configureViews() {
-        collectionView.backgroundColor = .background
+        collectionView.backgroundColor = .primary
         collectionView.reloadData()
     }
 }
