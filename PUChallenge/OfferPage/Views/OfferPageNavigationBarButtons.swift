@@ -45,10 +45,13 @@ extension OfferPageNavigationBarButtons: CodableView {
     }
 
     func configureViews() {
-        for _ in (0...2) {
-            let view = UIImageView(image: UIImage(named: "heart"))
-            view.tintColor = .white
-            stack.addArrangedSubview(view)
+         [
+            UIImageView(image: UIImage(named: "slider")),
+            UIImageView(image: UIImage(named: "heart")),
+            UIImageView(image: UIImage(named: "cart"))
+            ].forEach { view in
+                view.tintColor = .white
+                stack.addArrangedSubview(view)
         }
     }
 }
