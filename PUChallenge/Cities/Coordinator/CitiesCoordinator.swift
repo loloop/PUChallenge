@@ -26,9 +26,8 @@ final class CitiesCoordinator: TabbedCoordinator {
     }
 
     func startController() -> UIViewController {
-        // TODO: stringsdict
         let cities = OfferPageViewController()
-        cities.tabBarItem = UITabBarItem(title: "Na cidade",
+        cities.tabBarItem = UITabBarItem(title: CitiesStrings.tabBarTitle,
                                          image: UIImage(named: "house"),
                                          selectedImage: UIImage(named: "housefill"))
         return UINavigationController(rootViewController: cities)

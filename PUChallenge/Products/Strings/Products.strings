@@ -1,0 +1,11 @@
+/* 
+  Products.strings
+  PUChallenge
+
+  Created by Mauricio Cardozo on 11/17/19.
+  Copyright © 2019 Mauricio Cardozo. All rights reserved.
+*/
+"tab.bar.title" = "Produtos";
+
+// ProductCellViewModel
+"from.price.label" = "A partir de\n";

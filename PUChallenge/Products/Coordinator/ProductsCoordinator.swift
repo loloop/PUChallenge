@@ -26,9 +26,8 @@ final class ProductsCoordinator: TabbedCoordinator {
     }
 
     func startController() -> UIViewController {
-        // TODO: stringsdict
         let products = OfferPageViewController(service: ProductsService())
-        products.tabBarItem = UITabBarItem(title: "Produtos",
+        products.tabBarItem = UITabBarItem(title: ProductsStrings.tabBarTitle,
                                            image: UIImage(named: "bag"),
                                            selectedImage: UIImage(named: "bagfill"))
         return UINavigationController(rootViewController: products)

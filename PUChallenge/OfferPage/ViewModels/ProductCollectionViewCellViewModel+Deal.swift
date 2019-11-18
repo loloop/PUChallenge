@@ -10,8 +10,7 @@ import UIKit
 
 extension ProductCellViewModel {
     init(deal: Deal) {
-        // TODO: stringsdict
-        let attributedString = NSMutableAttributedString(string: "A partir de\n",
+        let attributedString = NSMutableAttributedString(string: ProductsStrings.fromPriceLabel,
                                                          attributes: [.foregroundColor: UIColor.gray,
                                                          .font: UIFont.systemFont(ofSize: 12)])
 

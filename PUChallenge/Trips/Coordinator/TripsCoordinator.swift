@@ -26,9 +26,8 @@ final class TripsCoordinator: TabbedCoordinator {
     }
 
     func startController() -> UIViewController {
-        // TODO: stringsdict
         let trips = OfferPageViewController(service: TripsService())
-        trips.tabBarItem = UITabBarItem(title: "Viagens", image: UIImage(named: "airplane"), selectedImage: nil)
+        trips.tabBarItem = UITabBarItem(title: TripsStrings.tabBarTitle, image: UIImage(named: "airplane"), selectedImage: nil)
         return UINavigationController(rootViewController: trips)
     }
 

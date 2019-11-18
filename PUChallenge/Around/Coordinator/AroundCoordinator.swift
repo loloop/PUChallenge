@@ -26,9 +26,8 @@ final class AroundCoordinator: TabbedCoordinator {
     }
 
     func startController() -> UIViewController {
-        // TODO: stringsdict
         let controller = UINavigationController()
-        controller.tabBarItem = UITabBarItem(title: "Por aqui",
+        controller.tabBarItem = UITabBarItem(title: AroundStrings.tabBarTitle,
                                              image: UIImage(named: "location"),
                                              selectedImage: UIImage(named: "location.fill"))
         return controller
