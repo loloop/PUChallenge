@@ -11,7 +11,7 @@
 		B47C6A2F237C74D80071BFC7 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47C6A25237C74D80071BFC7 /* Common.framework */; };
 		B47C6A34237C74D80071BFC7 /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A33237C74D80071BFC7 /* CommonTests.swift */; };
 		B47C6A36237C74D80071BFC7 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = B47C6A28237C74D80071BFC7 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B47C6A51237C76200071BFC7 /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A4C237C75610071BFC7 /* CodableView.swift */; };
+		B47C6A51237C76200071BFC7 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A4C237C75610071BFC7 /* ViewConfiguration.swift */; };
 		B47C6A52237C76220071BFC7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A4D237C75610071BFC7 /* Coordinator.swift */; };
 		B47C6A57237C773B0071BFC7 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A56237C773B0071BFC7 /* UICollectionView+Reusable.swift */; };
 		B47C6A5E237C77AB0071BFC7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C6A5C237C77AB0071BFC7 /* APIClient.swift */; };
@@ -44,7 +44,7 @@
 		B47C6A2E237C74D80071BFC7 /* CommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47C6A33237C74D80071BFC7 /* CommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTests.swift; sourceTree = "<group>"; };
 		B47C6A35237C74D80071BFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B47C6A4C237C75610071BFC7 /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
+		B47C6A4C237C75610071BFC7 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		B47C6A4D237C75610071BFC7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B47C6A56237C773B0071BFC7 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Reusable.swift"; path = "Common/Extensions/UICollectionView+Reusable.swift"; sourceTree = SOURCE_ROOT; };
 		B47C6A5C237C77AB0071BFC7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		B47C6A4E237C75610071BFC7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B47C6A4C237C75610071BFC7 /* CodableView.swift */,
+				B47C6A4C237C75610071BFC7 /* ViewConfiguration.swift */,
 				B47C6A4D237C75610071BFC7 /* Coordinator.swift */,
 				B47C6A77237CD26F0071BFC7 /* Section.swift */,
 			);
@@ -295,7 +295,7 @@
 				B47C6A9A237F757A0071BFC7 /* CollectionView.swift in Sources */,
 				B47C6A7A237CD38B0071BFC7 /* CollectionViewDataSource.swift in Sources */,
 				B47C6A52237C76220071BFC7 /* Coordinator.swift in Sources */,
-				B47C6A51237C76200071BFC7 /* CodableView.swift in Sources */,
+				B47C6A51237C76200071BFC7 /* ViewConfiguration.swift in Sources */,
 				B47C6A5E237C77AB0071BFC7 /* APIClient.swift in Sources */,
 				B46FFFA72382101B003F9FDF /* ErrorView.swift in Sources */,
 				B47C6A63237C82550071BFC7 /* LoadingView.swift in Sources */,

@@ -64,7 +64,7 @@ final class ProductCell: UICollectionViewCell {
     }
 }
 
-extension ProductCell: CodableView {
+extension ProductCell: ViewConfiguration {
     func setupViewHierarchy() {
         contentView.addSubviews([
             productImage,

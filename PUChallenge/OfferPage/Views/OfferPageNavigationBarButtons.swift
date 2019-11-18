@@ -30,7 +30,7 @@ final class OfferPageNavigationBarButtons: UIView {
 
 }
 
-extension OfferPageNavigationBarButtons: CodableView {
+extension OfferPageNavigationBarButtons: ViewConfiguration {
     func setupViewHierarchy() {
         addSubview(stack)
     }

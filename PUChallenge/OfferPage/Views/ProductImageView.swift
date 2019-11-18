@@ -114,7 +114,7 @@ final class ProductImageView: UIView {
     }
 }
 
-extension ProductImageView: CodableView {
+extension ProductImageView: ViewConfiguration {
     func setupViewHierarchy() {
         addSubviews([
             productImage,

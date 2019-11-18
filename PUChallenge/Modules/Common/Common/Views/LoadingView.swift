@@ -37,7 +37,7 @@ public final class LoadingView: UIView {
     }
 }
 
-extension LoadingView: CodableView {
+extension LoadingView: ViewConfiguration {
     public func setupViewHierarchy() {
         addSubview(activityView)
     }

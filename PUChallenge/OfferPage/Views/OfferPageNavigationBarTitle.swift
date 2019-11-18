@@ -49,7 +49,7 @@ final class OfferPageNavigationBarTitle: UIView {
 
 }
 
-extension OfferPageNavigationBarTitle: CodableView {
+extension OfferPageNavigationBarTitle: ViewConfiguration {
     func setupViewHierarchy() {
         addSubview(stack)
     }

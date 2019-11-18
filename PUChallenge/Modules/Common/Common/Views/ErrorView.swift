@@ -57,7 +57,7 @@ public final class ErrorView: UIView {
     }
 }
 
-extension ErrorView: CodableView {
+extension ErrorView: ViewConfiguration {
 
     public func setupViewHierarchy() {
         addSubview(tryAgainButton)

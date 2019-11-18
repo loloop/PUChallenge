@@ -60,7 +60,7 @@ final class ProductDescriptionView: UIView {
 
 }
 
-extension ProductDescriptionView: CodableView {
+extension ProductDescriptionView: ViewConfiguration {
     func setupViewHierarchy() {
         addSubviews([
             dealName,

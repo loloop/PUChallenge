@@ -6,14 +6,14 @@
 //  Copyright © 2019 Mauricio Cardozo. All rights reserved.
 //
 
-public protocol CodableView {
+public protocol ViewConfiguration {
     func setupViews()
     func setupViewHierarchy()
     func setupConstraints()
     func configureViews()
 }
 
-extension CodableView {
+extension ViewConfiguration {
 
     public func setupViews() {
         setupViewHierarchy()

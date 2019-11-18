@@ -42,7 +42,7 @@ final class OfferPageView: UIView {
 
 }
 
-extension OfferPageView: CodableView {
+extension OfferPageView: ViewConfiguration {
     func setupViewHierarchy() {
         addSubview(collectionView)
     }
