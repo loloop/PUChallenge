@@ -86,10 +86,6 @@ extension ProductCell: CodableView {
 
     func configureViews() {
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        if #available(iOS 13.0, *) {
-            contentView.backgroundColor = .systemBackground
-        } else {
-            contentView.backgroundColor = .background
-        }
+        contentView.backgroundColor = .background
     }
 }
