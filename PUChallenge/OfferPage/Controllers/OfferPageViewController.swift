@@ -55,7 +55,7 @@ final class OfferPageViewController: UIViewController {
     }
 
     func setupError() {
-        // view = ErrorView(delegate: self)
+         view = ErrorView(delegate: self)
     }
 
     func configureNavigation() {
@@ -68,4 +68,11 @@ final class OfferPageViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: OfferPageNavigationBarTitle(title: title))
     }
 
+}
+
+extension OfferPageViewController: ErrorViewDelegate {
+    func didTapTryAgainButton() {
+        view = LoadingView()
+        fetchData()
+    }
 }

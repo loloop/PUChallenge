@@ -30,7 +30,7 @@ extension UIColor {
     }
 
     public static var background: UIColor {
-        .white
+        color(for: "background")
     }
 
     private static func color(for name: String) -> UIColor {

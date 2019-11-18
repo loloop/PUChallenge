@@ -48,11 +48,6 @@ extension LoadingView: CodableView {
 
     public func configureViews() {
         activityView.startAnimating()
-
-        if #available(iOS 13.0, *) {
-            backgroundColor = .systemBackground
-        } else {
-            backgroundColor = .background
-        }
+        backgroundColor = .background
     }
 }
